@@ -1,0 +1,18 @@
+The following CSS code snippet has a subtle bug that can lead to unexpected layout issues in certain browsers or scenarios:
+
+```css
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+}
+```
+
+This code intends to create a flex container with two items spaced evenly apart. However, if the total width of the items exceeds the container's width, `justify-content: space-between;` might not behave as expected, potentially causing unexpected overflow or layout shifts.
+
+The issue arises because `space-between` distributes space *between* the items, not necessarily ensuring that the items stay within the container's bounds. If the total width of the items is larger than the container, they'll overflow.
