@@ -1,0 +1,17 @@
+The following corrected CSS code addresses the overflow issue:
+
+```css
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  width: auto; /* Added width: auto */
+  min-width: 100px; /* Ensure minimum width */
+  height: 100px;
+  background-color: lightblue;
+}
+```
+
+By using `width: auto;`, the flex items will now automatically adjust their width to fit within the container, preventing overflow and maintaining the intended even spacing between them.  `min-width: 100px;` is added to prevent the items from shrinking smaller than intended.
